@@ -1,0 +1,101 @@
+.admin-home{
+    min-height: 100vh;
+}
+.admin-home nav{
+    max-height: 4.5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.admin-profile{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-image: url("/src/assets/profile_10302971.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.admin-profile div{
+    background-color: #f4f4f4;
+    padding: 1rem 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    right: 1.5rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.1s ease; 
+}
+
+.admin-profile > div.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear;
+  }
+  
+  .admin-profile > div.closed {
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  
+
+table{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+thead tr{
+    background-color: #f4f4f4;
+}
+tbody tr{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.125);
+}
+.options{
+    @apply absolute top-1 right-5 rounded-sm cursor-pointer;
+    transform: scale();
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    background-color: #f3f3f3;
+    display: none;
+}
+
+/* add button ui */
+
+.add-user-btn{ 
+    position: absolute;
+    right: 180px;
+    top: 110px;
+    background-color: #f3f3f3;
+    border: 1px solid rgb(206, 198, 198);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.modal-close{
+    @apply absolute top-5 right-5 text-3xl text-gray-500 hover:text-black;
+  }
+.admin-add-user {
+    height: 30rem;
+}
+
+
+.change-data input{
+     height: 3rem;
+     outline: none;
+     padding-left: 10px;
+     border-radius: 4px;
+}
+.change-data button{
+    background-color: rgb(6, 128, 57);
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
